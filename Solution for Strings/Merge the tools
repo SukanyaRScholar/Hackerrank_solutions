@@ -1,0 +1,22 @@
+def merge_the_tools(string, k):
+    n=len(string)
+    c=0
+    temp=[]
+    for i in range((n//k)):
+        temp.append(string[c:k].strip())
+        c=k
+        k+=k
+    # print(temp)
+
+    for j in temp:
+        x=''
+        for l in j:
+            if l not in x:
+                x+=l
+        print(x)
+
+    # your code goes here
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
